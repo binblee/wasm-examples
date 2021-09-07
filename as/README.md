@@ -6,7 +6,7 @@ Follow [https://www.assemblyscript.org/quick-start.html](https://www.assemblyscr
 
 ## Demo code
 
-Update [assembly/index.ts].
+Update [assembly/index.ts](assembly/index.ts) as you wish.
 
 ## Build it
 
