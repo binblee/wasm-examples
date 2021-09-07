@@ -5,16 +5,16 @@
  (type $i32_i32_i32_i32_=>_none (func (param i32 i32 i32 i32)))
  (import "index" "log" (func $assembly/index/log (param i32)))
  (import "env" "abort" (func $~lib/builtins/abort (param i32 i32 i32 i32)))
- (global $~lib/memory/__data_end i32 (i32.const 60))
- (global $~lib/memory/__stack_pointer (mut i32) (i32.const 16444))
- (global $~lib/memory/__heap_base i32 (i32.const 16444))
+ (global $~lib/memory/__data_end i32 (i32.const 124))
+ (global $~lib/memory/__stack_pointer (mut i32) (i32.const 16508))
+ (global $~lib/memory/__heap_base i32 (i32.const 16508))
  (memory $0 1)
- (data (i32.const 12) ",\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\18\00\00\00H\00e\00l\00l\00o\00 \00W\00o\00r\00l\00d\00!\00\00\00\00\00")
+ (data (i32.const 12) "l\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\\\00\00\00A\00s\00s\00e\00m\00b\00l\00y\00S\00c\00r\00i\00p\00t\00 \00c\00a\00l\00l\00 \00J\00a\00v\00a\00S\00c\00r\00i\00p\00t\00 \00f\00u\00n\00c\00t\00i\00o\00n\00 \00w\00o\00r\00k\00s\00.\00")
  (table $0 1 funcref)
  (elem $0 (i32.const 1))
  (export "add" (func $assembly/index/add))
  (export "sub" (func $assembly/index/sub))
- (export "test" (func $assembly/index/test))
+ (export "as_call_js_test" (func $assembly/index/as_call_js_test))
  (export "memory" (memory $0))
  (func $assembly/index/add (param $0 i32) (param $1 i32) (result i32)
   local.get $0
@@ -31,15 +31,15 @@
   global.get $~lib/memory/__data_end
   i32.lt_s
   if
-   i32.const 16464
-   i32.const 16512
+   i32.const 16528
+   i32.const 16576
    i32.const 1
    i32.const 1
    call $~lib/builtins/abort
    unreachable
   end
  )
- (func $assembly/index/test
+ (func $assembly/index/as_call_js_test
   (local $0 i32)
   global.get $~lib/memory/__stack_pointer
   i32.const 4
