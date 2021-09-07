@@ -11,7 +11,7 @@ Update [assembly/index.ts](assembly/index.ts) as you wish.
 ## Build it
 
 ```bash
-npm run as build
+npm run asbuild
 ```
 
 ## Run it
